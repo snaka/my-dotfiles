@@ -1,0 +1,55 @@
+########################################
+# set
+########################################
+
+set tab-size = 4
+set ignore-space = all
+
+########################################
+# key bindings
+########################################
+
+### generic ###
+
+# Vim風に<C-f>,<C-b>でページ移動
+#bind generic ^f scroll-page-down
+#bind generic ^b scroll-page-up
+bind generic <Ctrl-f> scroll-page-down
+bind generic <Ctrl-b> scroll-page-up
+
+# stash
+#bind generic s !?git stash
+#bind generic S !?git stash pop
+#bind generic ^p !?git pull
+bind generic G move-last-line
+
+
+### main-view ###
+
+bind main T !git tag %(prompt) %(commit)
+
+# 選択位置からのリベース
+bind main B !git rebase -i %(commit)^
+
+### status ###
+
+# commit コメント時に詳細を見る
+bind status C !git commit -v
+
+# 直前のコミットをやり直し
+bind status <Ctrl-C> !git commit --amend
+
+# 変更の取消
+bind status U !git checkout -- %(file)
+
+# ammend
+bind status A !git commit --amend -v
+
+# delete
+bind status D !?@rm %(file)
+
+# rename
+bind status M !?@mv %(file) %(file).BACKUP
+
+# apply patch
+bind status P !git apply %(file)
