@@ -80,8 +80,16 @@ export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 export NVM_DIR=~/.nvm
 source /usr/local/opt/nvm/nvm.sh
 
+# for rbenv
+source ~/.bashrc.d/rbenv
+
+# for pyenv
+source ~/.bashrc.d/pyenv
+
 # for AWS
 source ~/.bashrc.d/aws
 
 # load secrets
 source ~/.bashrc_secrets
+
+
