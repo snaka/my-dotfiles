@@ -4,6 +4,7 @@
 
 set tab-size = 4
 set ignore-space = all
+set status-show-untracked-files = yes
 
 ########################################
 # key bindings
