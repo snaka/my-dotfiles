@@ -50,7 +50,16 @@ function parse_git_branch {
   git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e "s/* \(.*\)/[\1$(parse_git_dirty)]/"
 }
 
-export PS1="$Green\h:\W$Yellow\$(parse_svn_branch)\$(parse_git_branch)$Color_Off $ "
+
+# prompt
+PS_LINE=$(printf -- '- %.0s' {1..200})
+COLS=$(tput cols)
+PS_FILL=${PS_LINE:0:$COLS}
+PS_INFO="$Green\h:\W$Color_Off"
+PS_GIT="$Yellow\$(parse_svn_branch)\$(parse_git_branch)$Color_Off"
+PS_TIME="\e[\$((COLS-10))G\] $Red[\t]$Color_Off"
+# export PS1="$Green\h:\W$Yellow\$(parse_svn_branch)\$(parse_git_branch)$Color_Off $ "
+export PS1="$PS_FILL\e[0G\]$PS_INFO$PS_GIT$PS_TIME\n$ "
 
 # colordiff -> diff
 if [[ -x `which colordiff` ]]; then
