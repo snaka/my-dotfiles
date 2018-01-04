@@ -119,6 +119,8 @@ NeoBundle 'othree/yajs.vim'
 NeoBundle 'maxmellon/vim-jsx-pretty'
 NeoBundle 'Yggdroot/indentLine'
 NeoBundle 'nanotech/jellybeans.vim'
+NeoBundle 'chase/vim-ansible-yaml'
+NeoBundle 'lepture/vim-jinja'
 
 call neobundle#end()
 
