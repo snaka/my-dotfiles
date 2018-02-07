@@ -91,20 +91,26 @@ source $(dirname $(dirname $(gem which tmuxinator)))/completion/tmuxinator.bash
 
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 
-# for NVM
-export NVM_DIR=~/.nvm
-source /usr/local/opt/nvm/nvm.sh
-
-# for rbenv
-source ~/.bashrc.d/rbenv
-
-# for pyenv
-source ~/.bashrc.d/pyenv
-
-# for AWS
-source ~/.bashrc.d/aws
-
-# load secrets
-source ~/.bashrc_secrets
-
-
+# # for NVM
+# source ~/.bash
+# 
+# # for rbenv
+# source ~/.bashrc.d/rbenv
+# 
+# # for pyenv
+# source ~/.bashrc.d/pyenv
+# 
+# # for AWS
+# source ~/.bashrc.d/aws
+# 
+# # for Oracle Instant Client
+# source ~/.bashrc.d/oracle
+# 
+# # load secrets
+# source ~/.bashrc_secrets
+# 
+# # for Java
+# source ~/.bashrc.d/java
+for sub_rc_script in ~/.bashrc.d/*; do
+  source $sub_rc_script  
+done
