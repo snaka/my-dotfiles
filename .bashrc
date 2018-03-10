@@ -89,6 +89,11 @@ fi
 # tmuxinator
 source $(dirname $(dirname $(gem which tmuxinator)))/completion/tmuxinator.bash
 
+# git
+if [ -f ~/completions/git-completion.bash ]; then
+  . ~/completions/git-completion.bash
+fi
+
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 
 # # for NVM
