@@ -100,7 +100,7 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 NeoBundle 'Shougo/neobundle.vim'
 NeoBundle 'Shougo/vimproc.vim'
 NeoBundle 'Shougo/unite.vim'
-NeoBundle 'ujihisa/unite-colorscheme'
+"NeoBundle 'ujihisa/unite-colorscheme'
 NeoBundle 'Lokaltog/powerline', { 'rtp' : 'powerline/bindings/vim'}
 NeoBundle 'alpaca-tc/alpaca_tags'
 NeoBundle 'scrooloose/syntastic'
@@ -135,7 +135,7 @@ let g:syntastic_mode_map = { 'mode': 'passive', 'active_filetypes': ['ruby'] }
 let g:syntastic_ruby_checkers = ['rubocop']
 
 "--- colorscheme
-colorscheme jellybeans
+"colorscheme jellybeans
 
 "================
 " その他
