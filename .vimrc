@@ -121,6 +121,7 @@ NeoBundle 'Yggdroot/indentLine'
 NeoBundle 'nanotech/jellybeans.vim'
 NeoBundle 'chase/vim-ansible-yaml'
 NeoBundle 'lepture/vim-jinja'
+NeoBundle 'elzr/vim-json'
 
 call neobundle#end()
 
@@ -228,3 +229,7 @@ au VimEnter * RainbowParenthesesToggle
 au Syntax * RainbowParenthesesLoadRound
 au Syntax * RainbowParenthesesLoadSquare
 
+" ===========================
+" vim-json
+" ===========================
+let g:vim_json_syntax_conceal = 0
