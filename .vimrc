@@ -122,6 +122,7 @@ NeoBundle 'nanotech/jellybeans.vim'
 NeoBundle 'chase/vim-ansible-yaml'
 NeoBundle 'lepture/vim-jinja'
 NeoBundle 'elzr/vim-json'
+NeoBundle 'leafgarland/typescript-vim'
 
 call neobundle#end()
 
