@@ -82,8 +82,10 @@ export LESS='-R'
 # ----------------------
 
 # Homebrew packages
-if [ -f $(brew --prefix)/etc/bash_completion ]; then
-  . $(brew --prefix)/etc/bash_completion
+if [ -x "$(command -v brew)" ]; then
+  if [ -f $(brew --prefix)/etc/bash_completion ]; then
+    . $(brew --prefix)/etc/bash_completion
+  fi
 fi
 
 # tmuxinator
@@ -98,24 +100,24 @@ export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 
 # # for NVM
 # source ~/.bash
-# 
+#
 # # for rbenv
 # source ~/.bashrc.d/rbenv
-# 
+#
 # # for pyenv
 # source ~/.bashrc.d/pyenv
-# 
+#
 # # for AWS
 # source ~/.bashrc.d/aws
-# 
+#
 # # for Oracle Instant Client
 # source ~/.bashrc.d/oracle
-# 
+#
 # # load secrets
 # source ~/.bashrc_secrets
-# 
+#
 # # for Java
 # source ~/.bashrc.d/java
 for sub_rc_script in ~/.bashrc.d/*; do
-  source $sub_rc_script  
+  source $sub_rc_script
 done
