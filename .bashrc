@@ -90,7 +90,9 @@ if [ -x "$(command -v brew)" ]; then
 fi
 
 # tmuxinator
-source $(dirname $(dirname $(gem which tmuxinator)))/completion/tmuxinator.bash
+if [ -x "$(command -v tmuxinator)" ]; then
+  source $(dirname $(dirname $(gem which tmuxinator)))/completion/tmuxinator.bash
+fi
 
 # git
 if [ -f ~/completions/git-completion.bash ]; then
@@ -119,6 +121,8 @@ export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 #
 # # for Java
 # source ~/.bashrc.d/java
-for sub_rc_script in ~/.bashrc.d/*; do
-  source $sub_rc_script
-done
+if [ -d "$HOME/.bashrc.d" ]; then
+  for sub_rc_script in ~/.bashrc.d/*; do
+    source $sub_rc_script
+  done
+fi
