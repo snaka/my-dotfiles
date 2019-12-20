@@ -1,4 +1,6 @@
 # see https://qiita.com/hidache/items/7dbf0eba2f36f5e1a447
+
+# ghq のプロジェクトに移動
 function ghql() {
   local src=$(ghq list --full-path | peco --query "$LBUFFER")
   if [ -n "$src" ]; then
@@ -7,4 +9,4 @@ function ghql() {
 }
 
 bind -x '"\201": ghql'
-bind '"\C-g":"\201\C-m"'
+bind '"\C-]":"\201\C-m"'
