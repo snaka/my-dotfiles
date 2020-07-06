@@ -175,10 +175,6 @@ map <C-p> :tabprev<CR>
 " 保存
 map <leader>s :update<CR>
 
-" プロジェクト関係
-cab seven ~/projects/seven/game_server
-cab nine ~/projects/nine/game_server
-
 " vimdiff の色設定
 hi DiffAdd    ctermfg=black ctermbg=2
 hi DiffChange ctermfg=black ctermbg=3
