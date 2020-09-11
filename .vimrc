@@ -123,6 +123,9 @@ NeoBundle 'chase/vim-ansible-yaml'
 NeoBundle 'lepture/vim-jinja'
 NeoBundle 'elzr/vim-json'
 NeoBundle 'leafgarland/typescript-vim'
+NeoBundle 'prabirshrestha/vim-lsp'
+NeoBundle 'mattn/vim-lsp-settings'
+NeoBundle 'prabirshrestha/asyncomplete.vim'
 
 call neobundle#end()
 
