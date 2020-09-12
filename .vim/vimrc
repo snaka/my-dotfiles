@@ -1,0 +1,64 @@
+" --------------------------------------------------
+" Vim 本体側のデフォルト値設定
+" --------------------------------------------------
+
+" fileencodings
+set fileencodings=utf-8,cp932,sjis
+
+" statusline行数
+set laststatus=2
+
+" オートインデント
+set autoindent
+
+" タブ関係
+set expandtab
+set shiftwidth=2
+set tabstop=2
+
+" バックスペースでinsertモードの前に入力した文字も消す
+set backspace=2
+
+" 行番号
+set number
+
+" 行末のスペースを可視化
+highlight WhitespaceEOL ctermbg=red guibg=red
+autocmd WinEnter * match WhitespaceEOL /\s\+$/
+
+" 全てのモードでマウスを使用可能に
+set mouse=a
+set ttymouse=xterm2
+
+" --------------------------------------------------
+" プラグイン読み込み
+" --------------------------------------------------
+
+" プラグインを指定の場所にインストール
+call plug#begin('~/.vim/plugged')
+" Plug 'Lokaltog/powerline', { 'rtp' : 'powerline/bindings/vim'}
+Plug 'Yggdroot/indentLine'
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-fugitive'
+Plug 'prabirshrestha/vim-lsp'
+Plug 'mattn/vim-lsp-settings'
+Plug 'kien/rainbow_parentheses.vim'
+call plug#end()
+
+" --------------------------------------------------
+" ユーザ固有のマッピング&コマンド定義
+"   &
+" プラグイン固有の設定
+" --------------------------------------------------
+
+" .vim/_config/*.vim を順次読み込む
+"   prefix:
+"     000 - Vim設定
+"     100 - 全体に関わるプラグイン設定
+"     300 - ファイルタイプ関連
+"     400 - アプリケーション関係
+"
+call globpath(&runtimepath, '_config/*.vim')
+  \ ->split()
+  \ ->sort()
+  \ ->map({->[execute('exec "source" v:val')]})
