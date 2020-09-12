@@ -126,6 +126,7 @@ NeoBundle 'leafgarland/typescript-vim'
 NeoBundle 'prabirshrestha/vim-lsp'
 NeoBundle 'mattn/vim-lsp-settings'
 NeoBundle 'prabirshrestha/asyncomplete.vim'
+NeoBundle 'tpope/vim-fugitive'
 
 call neobundle#end()
 

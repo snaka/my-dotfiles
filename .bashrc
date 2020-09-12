@@ -66,7 +66,7 @@ PS_INFO="\W$Color_Off"
 PS_GIT="$Yellow\$(parse_svn_branch)\$(parse_git_branch)$Color_Off"
 PS_TIME="\e[\$((COLS-10))G\] $Red[\t]$Color_Off"
 # export PS1="$Green\h:\W$Yellow\$(parse_svn_branch)\$(parse_git_branch)$Color_Off $ "
-export PS1="$PS_INFO$PS_GIT\n$ "
+export PS1="$PS_INFO $PS_GIT\n$ "
 
 # colordiff -> diff
 if [[ -x `which colordiff` ]]; then
