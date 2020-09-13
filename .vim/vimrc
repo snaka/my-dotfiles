@@ -39,6 +39,7 @@ call plug#begin('~/.vim/plugged')
 " Plug 'Lokaltog/powerline', { 'rtp' : 'powerline/bindings/vim'}
 Plug 'Yggdroot/indentLine'
 Plug 'tpope/vim-surround'
+Plug 'scrooloose/nerdtree'
 Plug 'tpope/vim-fugitive'
 Plug 'prabirshrestha/vim-lsp'
 Plug 'mattn/vim-lsp-settings'
@@ -54,7 +55,8 @@ call plug#end()
 " .vim/_config/*.vim を順次読み込む
 "   prefix:
 "     000 - Vim設定
-"     100 - 全体に関わるプラグイン設定
+"     100 - Vimの全体に関わるプラグイン設定
+"     200 - プラグイン固有設定だが全体に関わる
 "     300 - ファイルタイプ関連
 "     400 - アプリケーション関係
 "
