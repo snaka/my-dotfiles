@@ -9,7 +9,7 @@ function! s:on_lsp_buffer_enabled() abort
   " キーマッピング
   nmap <buffer> gd <plug>(lsp-definition)
   nmap <buffer> gr <plug>(lsp-references)
-  nmap <buffer> gg <plug>(lsp-signature-help)
+  nmap <buffer> gs <plug>(lsp-signature-help)
   nmap <buffer> gm <plug>(lsp-document-symbol)
   nmap <buffer> gw <plug>(lsp-workspace-symbol)
   nmap <buffer> gn <plug>(lsp-rename)
