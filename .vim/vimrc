@@ -40,15 +40,17 @@ set ttymouse=xterm2
 " プラグインを指定の場所にインストール
 call plug#begin('~/.vim/plugged')
 " Plug 'Lokaltog/powerline', { 'rtp' : 'powerline/bindings/vim'}
+" Plug 'mattn/vim-lsp-settings'
+" Plug 'prabirshrestha/asyncomplete-lsp.vim'
+" Plug 'prabirshrestha/vim-lsp'
 Plug 'Yggdroot/indentLine'
-Plug 'tpope/vim-surround'
-Plug 'scrooloose/nerdtree'
-Plug 'tpope/vim-fugitive'
+Plug 'dense-analysis/ale'
 Plug 'kien/rainbow_parentheses.vim'
-Plug 'prabirshrestha/vim-lsp'
 Plug 'mattn/vim-lsp-settings'
 Plug 'prabirshrestha/asyncomplete.vim'
-Plug 'prabirshrestha/asyncomplete-lsp.vim'
+Plug 'scrooloose/nerdtree'
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-surround'
 call plug#end()
 
 " --------------------------------------------------
