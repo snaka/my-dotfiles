@@ -26,6 +26,9 @@ set number
 highlight WhitespaceEOL ctermbg=red guibg=red
 autocmd WinEnter * match WhitespaceEOL /\s\+$/
 
+" grep時にquickfix-windowを開く
+autocmd QuickFixCmdPost *grep* cwindow
+
 " 全てのモードでマウスを使用可能に
 set mouse=a
 set ttymouse=xterm2
