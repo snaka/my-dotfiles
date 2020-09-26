@@ -45,6 +45,7 @@ call plug#begin('~/.vim/plugged')
 " Plug 'prabirshrestha/vim-lsp'
 Plug 'Yggdroot/indentLine'
 Plug 'dense-analysis/ale'
+Plug 'junegunn/vim-plug'
 Plug 'kien/rainbow_parentheses.vim'
 Plug 'prabirshrestha/asyncomplete.vim'
 Plug 'scrooloose/nerdtree'
