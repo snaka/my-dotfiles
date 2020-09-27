@@ -2,6 +2,9 @@
 " Vim 本体側のデフォルト値設定
 " --------------------------------------------------
 
+" ターミナルの色
+set t_Co=256  
+
 " fileencodings
 set fileencodings=utf-8,cp932,sjis
 
