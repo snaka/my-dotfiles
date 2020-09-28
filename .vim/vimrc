@@ -55,6 +55,14 @@ Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+
+" color schemes
+Plug 'dracula/vim'
+Plug 'ajmwagar/vim-deus'
+Plug 'christophermca/meta5'
+Plug 'nanotech/jellybeans.vim'
+Plug 'nightsense/carbonized'
+Plug 'wadackel/vim-dogrun'
 call plug#end()
 
 " --------------------------------------------------
