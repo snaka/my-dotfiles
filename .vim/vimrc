@@ -42,24 +42,27 @@ set ttymouse=xterm2
 
 " プラグインを指定の場所にインストール
 call plug#begin('~/.vim/plugged')
-" Plug 'mattn/vim-lsp-settings'
-" Plug 'prabirshrestha/asyncomplete-lsp.vim'
-" Plug 'prabirshrestha/vim-lsp'
 Plug 'Yggdroot/indentLine'
+Plug 'bronson/vim-trailing-whitespace'
 Plug 'dense-analysis/ale'
 Plug 'junegunn/vim-plug'
+Plug 'kchmck/vim-coffee-script'
 Plug 'kien/rainbow_parentheses.vim'
 Plug 'prabirshrestha/asyncomplete.vim'
 Plug 'scrooloose/nerdtree'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
+Plug 'tyru/open-browser-github.vim'
+Plug 'tyru/open-browser.vim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 
 " color schemes
-Plug 'dracula/vim'
 Plug 'ajmwagar/vim-deus'
 Plug 'christophermca/meta5'
+Plug 'dracula/vim'
+Plug 'hashivim/vim-packer'
+Plug 'hashivim/vim-terraform'
 Plug 'nanotech/jellybeans.vim'
 Plug 'nightsense/carbonized'
 Plug 'wadackel/vim-dogrun'
