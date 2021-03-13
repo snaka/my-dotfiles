@@ -37,6 +37,9 @@ bind main B !git rebase -i %(commit)^
 # 選択位置からの差分
 bind main D !git diff %(commit)..
 
+# 選択したコミットのリバート
+bind main ! !git revert %(commit)
+
 ### status ###
 
 # commit コメント時に詳細を見る
