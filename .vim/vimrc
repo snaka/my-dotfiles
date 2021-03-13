@@ -3,7 +3,7 @@
 " --------------------------------------------------
 
 " ターミナルの色
-set t_Co=256  
+set t_Co=256
 
 " fileencodings
 set fileencodings=utf-8,cp932,sjis
@@ -34,7 +34,7 @@ autocmd QuickFixCmdPost *grep* cwindow
 
 " 全てのモードでマウスを使用可能に
 set mouse=a
-set ttymouse=xterm2
+" set ttymouse=xterm2
 
 " --------------------------------------------------
 " プラグイン読み込み
@@ -82,7 +82,7 @@ call plug#end()
 "     300 - ファイルタイプ関連
 "     400 - アプリケーション関係
 "
-call globpath(&runtimepath, '_config/*.vim')
-  \ ->split()
-  \ ->sort()
-  \ ->map({->[execute('exec "source" v:val')]})
+call map(
+  \ sort(split(globpath(&runtimepath, '_config/*.vim'))),
+  \ {-> execute('exec "source" v:val') }
+  \ )
