@@ -126,3 +126,5 @@ if [ -d "$HOME/.bashrc.d" ]; then
     source $sub_rc_script
   done
 fi
+
+complete -C /usr/local/Cellar/tfenv/2.0.0/versions/0.13.4/terraform terraform
