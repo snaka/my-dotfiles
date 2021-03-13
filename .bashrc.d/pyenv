@@ -1,11 +1,13 @@
 #!/bin/bash
 # vim: filetype=sh
-if [ -x "$(command -v pyenv)" ]; then
+if [ -d "$HOME/.pyenv" ]; then
   # pyenv
   export PYENV_ROOT=$HOME/.pyenv
   export PATH=$PYENV_ROOT/bin:$PATH
   eval "$(pyenv init -)"
+fi
 
+if [ -d "$HOME/.pyenv/plugins/pyenv-virtualenv" ]; then
   # pyenv-virtualenv
   export PYENV_VIRTUALENV_DISABLE_PROMPT=1
   eval "$(pyenv virtualenv-init -)"
