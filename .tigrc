@@ -24,6 +24,8 @@ bind generic <Ctrl-b> scroll-page-up
 #bind generic ^p !?git pull
 bind generic G move-last-line
 
+# diff
+bind generic D !git difftool --tool=vimdiff --no-prompt %(commit)^ %(commit)
 
 ### main-view ###
 
