@@ -26,6 +26,9 @@ White='\e[0;37m'        # White
 
 alias dc=docker-compose
 alias be='docker-compose exec app bundle exec'
+# neovim
+alias vi='nvim'
+alias vim='nvim'
 
 #
 # parse SVN branch
