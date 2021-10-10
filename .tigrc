@@ -31,6 +31,9 @@ bind generic D !git difftool --tool=vimdiff --no-prompt %(commit)^ %(commit)
 
 bind main T !git tag %(prompt) %(commit)
 
+# 選択したコミットに fixup commit を積む
+bind main F !git commit --fixup %(commit)
+
 # 選択位置からのリベース
 bind main B !git rebase -i %(commit)^
 
