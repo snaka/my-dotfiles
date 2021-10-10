@@ -13,3 +13,11 @@ map <C-p> :tabprev<CR>
 " insert mode
 inoremap <C-j> <Down>
 inoremap <C-k> <Up>
+inoremap <silent> jj <ESC>
+
+" VSCode
+xmap gc <Plug>VSCodeCommentary
+nmap gc <Plug>VSCodeCommentary
+omap gc <Plug>VSCodeCommentary
+nmap gcc <Plug>VSCodeCommentaryLine
+
