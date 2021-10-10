@@ -1,0 +1,2 @@
+echo Initialize anyenv
+eval "$(anyenv init -)"

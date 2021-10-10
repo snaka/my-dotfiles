@@ -24,8 +24,10 @@ White='\e[0;37m'        # White
 # aliases
 #
 
-alias dc=docker-compose
-alias be='docker-compose exec app bundle exec'
+# alias dc=docker-compose
+alias be='docker compose run --rm app bundle exec'
+alias dcr='docker compose run --rm app'
+
 # neovim
 alias vi='nvim'
 alias vim='nvim'
@@ -93,9 +95,9 @@ if [ -x "$(command -v brew)" ]; then
 fi
 
 # tmuxinator
-if [ -x "$(command -v tmuxinator)" ]; then
-  source $(dirname $(dirname $(gem which tmuxinator)))/completion/tmuxinator.bash
-fi
+# if [ -x "$(command -v tmuxinator)" ]; then
+#   source $(dirname $(dirname $(gem which tmuxinator)))/completion/tmuxinator.bash
+# fi
 
 # git
 if [ -f ~/completions/git-completion.bash ]; then
@@ -104,26 +106,7 @@ fi
 
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 
-# # for NVM
-# source ~/.bash
-#
-# # for rbenv
-# source ~/.bashrc.d/rbenv
-#
-# # for pyenv
-# source ~/.bashrc.d/pyenv
-#
-# # for AWS
-# source ~/.bashrc.d/aws
-#
-# # for Oracle Instant Client
-# source ~/.bashrc.d/oracle
-#
-# # load secrets
-# source ~/.bashrc_secrets
-#
-# # for Java
-# source ~/.bashrc.d/java
+# load files
 if [ -d "$HOME/.bashrc.d" ]; then
   for sub_rc_script in ~/.bashrc.d/*; do
     source $sub_rc_script
@@ -131,3 +114,10 @@ if [ -d "$HOME/.bashrc.d" ]; then
 fi
 
 complete -C /usr/local/Cellar/tfenv/2.0.0/versions/0.13.4/terraform terraform
+
+# tabtab source for packages
+# uninstall by removing these lines
+[ -f ~/.config/tabtab/__tabtab.bash ] && . ~/.config/tabtab/__tabtab.bash || true
+
+# Added by serverless binary installer
+export PATH="$HOME/.serverless/bin:$PATH"
