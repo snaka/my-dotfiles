@@ -25,6 +25,7 @@ White='\e[0;37m'        # White
 #
 
 # alias dc=docker-compose
+alias dc='docker compose'
 alias be='docker compose run --rm app bundle exec'
 alias dcr='docker compose run --rm app'
 
