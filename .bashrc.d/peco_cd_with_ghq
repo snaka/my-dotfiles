@@ -1,0 +1,10 @@
+function ghql() {
+  local selected_file=$(ghq list --full-path | peco --query "$LBUFFER")
+  if [ -n "$selected_file" ]; then
+    if [ -t 1 ]; then
+      cd ${selected_file}
+    fi
+  fi
+}
+
+bind '"\C-g":"ghql\C-m"'

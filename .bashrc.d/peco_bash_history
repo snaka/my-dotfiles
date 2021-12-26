@@ -1,0 +1,10 @@
+peco_search_history() {
+  local selected=$(HISTTIMEFORMAT= history| \
+    sed -E s/^\ *[0-9]\+\ \+// | \
+    sort | uniq | \
+    peco --query "$READLINE_LINE" \
+  )
+  READLINE_LINE="$selected"
+  READLINE_POINT=${#selected}
+}
+bind -x '"\C-r": peco_search_history'
