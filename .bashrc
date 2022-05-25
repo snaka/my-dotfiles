@@ -3,6 +3,7 @@ export PATH=$PATH:~/bin:$GOPATH/bin:~/Library/Android/sdk/tools:~/Library/Androi
 export ANDROID_HOME=~/Library/Android/sdk
 export EDITOR=vim
 export LANG=ja_JP.UTF-8
+export LC_ALL=en_US.UTF-8  # Ubuntu-20 on WSL2 で問題が出たので設定
 
 #
 # Colors
