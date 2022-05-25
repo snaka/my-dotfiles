@@ -37,6 +37,8 @@ bind main F !git commit --fixup %(commit)
 # 選択位置からのリベース
 bind main B !git rebase -i %(commit)^
 
+bind main Q !git rebase -i --autosquash %(commit)^
+
 # 選択位置からの差分
 bind main D !git diff %(commit)..
 
