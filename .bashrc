@@ -1,6 +1,3 @@
-export GOPATH=$HOME/go
-export PATH=$PATH:~/bin:$GOPATH/bin:~/Library/Android/sdk/tools:~/Library/Android/sdk/platform-tools:~/Library/Android/sdk/build-tools/21.1.2
-export ANDROID_HOME=~/Library/Android/sdk
 export EDITOR=vim
 export LANG=ja_JP.UTF-8
 export LC_ALL=en_US.UTF-8  # Ubuntu-20 on WSL2 で問題が出たので設定
@@ -77,19 +74,10 @@ export LESS='-R'
 # enable bash_completion
 # ----------------------
 
-# Homebrew packages
-
-# tmuxinator
-# if [ -x "$(command -v tmuxinator)" ]; then
-#   source $(dirname $(dirname $(gem which tmuxinator)))/completion/tmuxinator.bash
-# fi
-
 # git
 if [ -f ~/completions/git-completion.bash ]; then
   . ~/completions/git-completion.bash
 fi
-
-export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 
 # load files
 if [ -d "$HOME/.bashrc.d" ]; then
@@ -106,3 +94,6 @@ complete -C /usr/local/Cellar/tfenv/2.0.0/versions/0.13.4/terraform terraform
 
 # Added by serverless binary installer
 export PATH="$HOME/.serverless/bin:$PATH"
+
+# Private bin directory
+export PATH=$PATH:~/bin
