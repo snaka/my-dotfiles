@@ -1,0 +1,25 @@
+[user]
+	name = S.Nakamatsu
+	email = 19329+snaka@users.noreply.github.com
+[alias]
+	co = checkout
+	st = status
+	br = branch
+	prune-no-longer-exist = "!git branch -vv | grep ': gone]' | grep -v '\\*' | awk '{ print $1; }' | xargs -r git branch -d"
+[core]
+	excludesfile = /home/snaka/.gitignore_global
+	pager = less -x4
+	editor = nvim
+[push]
+	default = simple
+[pull]
+	rebase = true
+	ff = only
+[fetch]
+	prune = true
+[merge]
+	ff = false
+[grep]
+	lineNumber = true
+[init]
+	defaultBranch = main
