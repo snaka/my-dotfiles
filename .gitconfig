@@ -1,6 +1,7 @@
 [user]
 	name = S.Nakamatsu
 	email = 19329+snaka@users.noreply.github.com
+	signingkey = 9096164DF741DC76
 [alias]
 	co = checkout
 	st = status
@@ -23,3 +24,9 @@
 	lineNumber = true
 [init]
 	defaultBranch = main
+[gpg]
+	program = gpg
+[commit]
+	gpgsign = true
+[tag]
+	gpgsign = true
