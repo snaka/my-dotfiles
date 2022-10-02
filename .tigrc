@@ -45,6 +45,9 @@ bind main D !git diff %(commit)..
 # 選択したコミットのリバート
 bind main ! !git revert %(commit)
 
+# Open GitHub URL
+bind main G @bash -c "gh browse %(commit)"
+
 ### status ###
 
 # commit コメント時に詳細を見る
