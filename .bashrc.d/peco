@@ -1,5 +1,8 @@
 #!/bin/bash
 # see https://qiita.com/hidache/items/7dbf0eba2f36f5e1a447
+#
+# DEPRECATED USE peco_cd_with_ghq
+#
 
 # ghq のプロジェクトに移動
 function ghql() {
