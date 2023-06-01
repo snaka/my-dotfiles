@@ -6,7 +6,7 @@
 	co = checkout
 	st = status
 	br = branch
-	prune-no-longer-exist = "!git branch -vv | grep ': gone]' | grep -v '\\*' | awk '{ print $1; }' | xargs -r git branch -d"
+	prune-no-longer-exist = "!git branch -vv | grep ': gone]' | grep -v '\\*' | awk '{ print $1; }' | xargs -r git branch -D"
 [core]
 	excludesfile = /home/snaka/.gitignore_global
 	pager = less -x4
