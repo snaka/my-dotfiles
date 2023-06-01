@@ -9,6 +9,7 @@
 	prune-no-longer-exist = "!git branch -vv | grep ': gone]' | grep -v '\\*' | awk '{ print $1; }' | xargs -r git branch -D"
 	submodule-pull = submodule update --remote
 	submodule-checkout = submodule update --init --recursive
+	pu = "!git push -u origin $(git rev-parse --abbrev-ref HEAD)"
 [core]
 	excludesfile = /home/snaka/.gitignore_global
 	pager = less -x4
