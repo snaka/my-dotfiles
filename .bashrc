@@ -32,20 +32,6 @@ alias vi='nvim'
 alias vim='nvim'
 
 #
-# parse SVN branch
-#
-
-parse_svn_branch() {
-  parse_svn_url | sed -e 's#^'"$(parse_svn_repository_root)"'##g' | sed -e 's#^/##g' | sed -e 's#^branches/##g' | sed -e 's#^tags/##g' | sed -e 's#^private/##g' | sed -e 's#\([^/]*\)/.*#\1#' | awk '{print " (svn:"$1")" }'
-}
-parse_svn_url() {
-  svn info 2>/dev/null | sed -ne 's#^URL: ##p'
-}
-parse_svn_repository_root() {
-  svn info 2>/dev/null | sed -ne 's#^Repository Root: ##p'
-}
-
-#
 # parse Git branch
 #
 function parse_git_dirty {
@@ -57,7 +43,7 @@ function parse_git_branch {
 
 # prompt
 PS_INFO="$Green\w$Color_Off"
-PS_GIT="$Yellow\$(parse_svn_branch)\$(parse_git_branch)$Color_Off"
+PS_GIT="$Yellow\$(parse_git_branch)$Color_Off"
 export PS1="$PS_INFO $PS_GIT\n$ "
 
 # colordiff -> diff
@@ -79,7 +65,9 @@ if [ -f ~/completions/git-completion.bash ]; then
   . ~/completions/git-completion.bash
 fi
 
+# ----------------------
 # load files
+# ----------------------
 if [ -d "$HOME/.bashrc.d" ]; then
   for sub_rc_script in ~/.bashrc.d/*; do
     source $sub_rc_script
