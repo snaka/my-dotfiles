@@ -1,0 +1,3 @@
+if [ -n "$(command -v aqua)" ]; then
+  export PATH="$(aqua root-dir)/bin:$PATH"
+fi
