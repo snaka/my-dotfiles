@@ -1,2 +1,5 @@
 source $(brew --prefix asdf)/libexec/asdf.sh
 source $(brew --prefix asdf)/etc/bash_completion.d/asdf.bash
+
+# for Go plugin
+export ASDF_GOLANG_MOD_VERSION_ENABLED=true
