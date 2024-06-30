@@ -12,7 +12,6 @@
 	pu = "!git push -u origin $(git rev-parse --abbrev-ref HEAD)"
 [core]
 	excludesfile = /home/snaka/.gitignore_global
-	pager = less -x4
   pager = delta
 	editor = nvim
 [interactive]
