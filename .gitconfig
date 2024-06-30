@@ -12,12 +12,12 @@
 	pu = "!git push -u origin $(git rev-parse --abbrev-ref HEAD)"
 [core]
 	excludesfile = /home/snaka/.gitignore_global
-  pager = delta
+	pager = delta
 	editor = nvim
 [interactive]
-  diffFilter = delta --color-only
+	diffFilter = delta --color-only
 [delta]
-  navigate = true
+	navigate = true
 [push]
 	default = simple
 [pull]
@@ -27,9 +27,9 @@
 	prune = true
 [merge]
 	ff = false
-  conflictstyle = diff3
+	conflictstyle = diff3
 [diff]
-  colorMoved = default
+	colorMoved = default
 [grep]
 	lineNumber = true
 [init]
