@@ -13,7 +13,12 @@
 [core]
 	excludesfile = /home/snaka/.gitignore_global
 	pager = less -x4
+  pager = delta
 	editor = nvim
+[interactive]
+  diffFilter = delta --color-only
+[delta]
+  navigate = true
 [push]
 	default = simple
 [pull]
@@ -23,6 +28,9 @@
 	prune = true
 [merge]
 	ff = false
+  conflictstyle = diff3
+[diff]
+  colorMoved = default
 [grep]
 	lineNumber = true
 [init]
