@@ -1,4 +1,7 @@
-if [ -n "$(command -v go)" ]; then
-  export GOPATH=$(go env GOPATH)
-  export PATH=$PATH:$GOPATH/bin
+if [ "$(go env GOBIN)" != "" ]; then
+  export PATH=$(go env GOBIN):$PATH
+elif [ "$(go env GOPATH)" != "" ]; then
+  export PATH=$(go env GOPATH)/bin:$PATH
+else
+  export PATH=$HOME/go/bin:$PATH
 fi
