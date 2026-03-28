@@ -88,3 +88,7 @@ export PATH=$PATH:~/bin
 
 # ignore duplicate history entries
 HISTCONTROL=ignoreboth
+
+
+# Local bin
+export PATH="$PATH:~/.local/bin"
