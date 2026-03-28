@@ -85,3 +85,6 @@ export PATH="$HOME/.serverless/bin:$PATH"
 
 # Private bin directory
 export PATH=$PATH:~/bin
+
+# ignore duplicate history entries
+HISTCONTROL=ignoreboth
