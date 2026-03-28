@@ -1,5 +1,19 @@
-source $(brew --prefix asdf)/libexec/asdf.sh
-source $(brew --prefix asdf)/etc/bash_completion.d/asdf
+# asdfがインストールされているか確認
+if command -v brew >/dev/null 2>&1 && brew --prefix asdf >/dev/null 2>&1; then
+  ASDF_PREFIX=$(brew --prefix asdf)
 
-# for Go plugin
-export ASDF_GOLANG_MOD_VERSION_ENABLED=true
+  # asdf.shが存在するか確認
+  if [ -f "$ASDF_PREFIX/libexec/asdf.sh" ]; then
+    source "$ASDF_PREFIX/libexec/asdf.sh"
+  fi
+
+  # 補完ファイルが存在するか確認 (try both filenames)
+  if [ -f "$ASDF_PREFIX/etc/bash_completion.d/asdf" ]; then
+    source "$ASDF_PREFIX/etc/bash_completion.d/asdf"
+  elif [ -f "$ASDF_PREFIX/etc/bash_completion.d/asdf.bash" ]; then
+    source "$ASDF_PREFIX/etc/bash_completion.d/asdf.bash"
+  fi
+
+  # for Go plugin
+  export ASDF_GOLANG_MOD_VERSION_ENABLED=true
+fi
