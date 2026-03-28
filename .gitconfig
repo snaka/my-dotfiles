@@ -11,7 +11,7 @@
 	submodule-checkout = submodule update --init --recursive
 	pu = "!git push -u origin $(git rev-parse --abbrev-ref HEAD)"
 [core]
-	excludesfile = /home/snaka/.gitignore_global
+	excludesfile = ~/.gitignore_global
 	pager = delta
 	editor = nvim
 [interactive]
