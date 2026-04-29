@@ -1,7 +1,7 @@
 [user]
 	name = Shinji Nakamatsu
 	email = 19329+snaka@users.noreply.github.com
-	signingkey = 9096164DF741DC76
+	signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIBDMBfm4DScYDSqThUG9NsgzJBeoNiJFdMMSXuknps35
 [alias]
 	co = checkout
 	st = status
@@ -35,7 +35,9 @@
 [init]
 	defaultBranch = main
 [gpg]
-	program = gpg
+	format = ssh
+[gpg "ssh"]
+	program = "/Applications/1Password.app/Contents/MacOS/op-ssh-sign"
 [commit]
 	gpgsign = true
 [tag]
