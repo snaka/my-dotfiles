@@ -1,7 +1,7 @@
 PREFIX=$(brew --prefix)
 if [ -d $PREFIX/opt/openssl@1.1 ]; then
   export PATH="$PREFIX/opt/openssl@1.1/bin:$PATH"
-  export LDFLAGS="-L$PREFIX/opt/openssl@1.1/lib"
-  export CPPFLAGS="-I$PREFIX/opt/openssl@1.1/include"
+  export LDFLAGS+=" -L$PREFIX/opt/openssl@1.1/lib"
+  export CPPFLAGS+=" -I$PREFIX/opt/openssl@1.1/include"
   export PKG_CONFIG_PATH="$PREFIX/opt/openssl@1.1/lib/pkgconfig"
 fi
