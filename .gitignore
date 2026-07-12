@@ -1,1 +1,34 @@
 *.swp
+
+# Credentials guardrail: never commit these.
+# Pre-commit hook (gitleaks) is the primary defense; this list is a fast
+# pre-filter so common secret files don't even reach `git add`.
+*.pem
+*.key
+*.p12
+*.pfx
+*.jks
+*.keystore
+*.asc
+*.gpg
+id_rsa
+id_rsa.*
+id_ed25519
+id_ed25519.*
+id_ecdsa
+id_ecdsa.*
+id_dsa
+id_dsa.*
+*.token
+*.secret
+.env
+.env.*
+!.env.example
+!.env.sample
+.netrc
+credentials
+credentials.json
+service-account*.json
+.aws/credentials
+.ssh/known_hosts
+.ssh/authorized_keys
