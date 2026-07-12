@@ -43,6 +43,7 @@ set mouse=a
 " プラグインを指定の場所にインストール
 call plug#begin('~/.vim/plugged')
 Plug 'Yggdroot/indentLine'
+Plug 'elzr/vim-json'
 Plug 'bronson/vim-trailing-whitespace'
 Plug 'dense-analysis/ale'
 Plug 'junegunn/vim-plug'
@@ -89,3 +90,6 @@ call map(
   \ sort(split(globpath(&runtimepath, '_config/*.vim'))),
   \ {-> execute('exec "source" v:val') }
   \ )
+
+" JSONのダブルクォート表示したい
+let g:vim_json_syntax_conceal = 0
