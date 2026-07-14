@@ -1,5 +1,8 @@
 *.swp
 
+# 端末固有の git 設定 (誤コミット防止)
+.gitconfig.local
+
 # Credentials guardrail: never commit these.
 # Pre-commit hook (gitleaks) is the primary defense; this list is a fast
 # pre-filter so common secret files don't even reach `git add`.

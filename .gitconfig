@@ -1,7 +1,6 @@
 [user]
 	name = Shinji Nakamatsu
 	email = 19329+snaka@users.noreply.github.com
-	signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIBDMBfm4DScYDSqThUG9NsgzJBeoNiJFdMMSXuknps35
 [alias]
 	co = checkout
 	st = status
@@ -34,11 +33,21 @@
 	lineNumber = true
 [init]
 	defaultBranch = main
-[gpg]
-	format = ssh
-[gpg "ssh"]
-	program = "/Applications/1Password.app/Contents/MacOS/op-ssh-sign"
 [commit]
 	gpgsign = true
-[tag]
-	gpgsign = true
+[filter "lfs"]
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+[credential "https://github.com"]
+	helper =
+	helper = !/opt/homebrew/bin/gh auth git-credential
+[credential "https://gist.github.com"]
+	helper =
+	helper = !/opt/homebrew/bin/gh auth git-credential
+[credential]
+	helper = osxkeychain
+# 端末固有の設定 (signingkey, gpg.ssh.program 等) は ~/.gitconfig.local に置く
+[include]
+	path = ~/.gitconfig.local
