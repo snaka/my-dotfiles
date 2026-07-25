@@ -1,0 +1,19 @@
+onboarding = false
+
+[ui]
+agent_panel_sort = "spaces"
+show_agent_labels_on_pane_borders = true
+pane_gaps = false
+
+[theme]
+name = "dracula"
+auto_switch = false
+
+[keys]
+prefix = "ctrl+a"
+
+[ui.toast]
+delivery = "system"
+
+[experimental]
+switch_ascii_input_source_in_prefix = true
