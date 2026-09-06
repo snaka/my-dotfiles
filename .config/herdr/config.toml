@@ -17,3 +17,6 @@ delivery = "system"
 
 [experimental]
 switch_ascii_input_source_in_prefix = true
+# Local Kitty graphics rendering for attached clients.
+# Requires a Kitty graphics-compatible outer terminal.
+kitty_graphics = true
