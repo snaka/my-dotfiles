@@ -20,3 +20,8 @@ switch_ascii_input_source_in_prefix = true
 # Local Kitty graphics rendering for attached clients.
 # Requires a Kitty graphics-compatible outer terminal.
 kitty_graphics = true
+
+# Show the Claude Code session title (written by Claude Code as the terminal
+# title, captured by herdr) in the agent panel rows for claude panes.
+[ui.sidebar.agents.rows_by_agent]
+claude = [["state_icon", "workspace", "tab"], [{ token = "terminal_title_stripped", dim = false }], ["agent"]]
